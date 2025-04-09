@@ -1,0 +1,50 @@
+/* style.css - Styling for day1.html */
+/* For King Bran Stark, SevenVoices, April 9, 2025 */
+
+body {
+    background-color: #f0f0f0; /* Stark grey */
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark text */
+    text-align: center;
+    padding: 20px;
+    margin: 0; /* Clean edges */
+}
+
+h1 {
+    color: #2c3e50; /* Deep blue-grey */
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #34495e; /* Slightly lighter */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 600px; /* Readable width */
+}
+
+.raven-link {
+    font-style: italic;
+}
+
+.raven-link a {
+    color: #2980b9; /* Raven blue */
+    text-decoration: none;
+}
+
+.raven-link a:hover {
+    text-decoration: underline;
+    color: #3498db; /* Lighter on hover */
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7f8c8d; /* Muted grey */
+}
