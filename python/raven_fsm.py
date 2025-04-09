@@ -19,6 +19,7 @@ class RavenMessenger:
     def on_delivered(self):
         print(f"Raven lands—'{self.message}' delivered, Your Grace!")
 
+
 # Create the raven with a message
 raven = RavenMessenger()
 
