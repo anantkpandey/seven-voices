@@ -10,7 +10,7 @@ class RavenTally:
         self.kingdoms = ['North', 'Vale', 'Riverlands', 'Dorne']
 
     def send_raven(self, kingdom):
-        raven = RavenMessenger()
+        raven = RavenMessenger()    # type: ignore
         machine = Machine(raven, states=['waiting', 'flying', 'delivered', 'lost'], initial='waiting')
         machine.add_transition('fly', 'waiting', 'flying')
         machine.add_transition('land', 'flying', 'delivered', conditions=lambda: random.random() > 0.2)
