@@ -1,4 +1,50 @@
-/* decrees.css */
-li { padding: 10px; border: 1px solid #2c3e50; margin: 5px; }
-li:hover { background-color: #ecf0f1; }
-.bold { font-weight: bold; }
+/* decrees.css - Styling for decrees.html */
+/* For King Bran Stark, crafted by Tyrion, Hand of the King, April 10, 2025 */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0; /* Stark grey */
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50; /* Deep blue-grey */
+    font-size: 36px;
+}
+
+h2 {
+    color: #34495e; /* Lighter blue-grey */
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#decree-list li {
+    padding: 10px;
+    border: 1px solid #2c3e50;
+    margin: 5px auto;
+    max-width: 400px; /* Neat list width */
+    list-style: none; /* No bullets */
+}
+
+#decree-list li:hover {
+    background-color: #ecf0f1; /* Light hover */
+}
+
+.bold {
+    font-weight: bold; /* For JS toggle */
+}
+
+/* New class for Folk’s Gains */
+.gain {
+    color: green; /* Prosperity’s hue */
+    padding: 8px;
+    margin: 5px auto;
+    max-width: 600px; /* Wider for gains */
+    list-style: square; /* Distinct bullets */
+    border-left: 3px solid #27ae60; /* Green accent */
+}
+
+.gain:hover {
+    background-color: #e8f8e8; /* Subtle green hover */
+}
