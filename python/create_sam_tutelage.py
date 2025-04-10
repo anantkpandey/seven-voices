@@ -3,7 +3,7 @@
 
 import pandas as pd
 
-# Data for sam_tutelage.xlsx
+# [Data unchanged - 18 rows as before]
 data = [
     ["Physics", "Understand forces—catapult design, castle defenses—enhancing military precision.", "Siege warfare inefficiencies; weak fortifications against dragons or trebuchets.", 10, "Stronger walls, fewer siege losses"],
     ["Chemistry", "Craft wildfire, fertilizers—control resources, boost agriculture, wield power.", "Famine from poor harvests; lack of alchemical defenses against foes like Cersei’s wildfire plots.", 15, "More crops, wildfire to deter invaders"],
@@ -33,7 +33,7 @@ print("Royal spreadsheet forged at SevenVoices/docs/sam_tutelage.xlsx, Your Grac
 # Define gains before HTML construction
 gains = df[["Subject Name", "Day to Apply", "Folk’s Gain"]].sort_values("Day to Apply")
 
-# Update decrees.html with Folk’s Gain
+# Update decrees.html with Folk’s Gain and Reset Button
 html_content = """
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +51,8 @@ html_content = """
         <li>Arya Learns Arrays</li>
     </ul>
     <h2>Folk’s Gains from King Bran’s Wisdom</h2>
-    <ul>
+    <button id="reset-gains">Reset All Gains</button>
+    <ul id="gains-list">
 """
 for _, row in gains.iterrows():
     html_content += f"        <li class='gain'>Day {row['Day to Apply']}: {row['Folk’s Gain']} (via {row['Subject Name']})</li>\n"
@@ -63,4 +64,4 @@ html_content += """    </ul>
 
 with open("webdev/decrees.html", "w") as f:
     f.write(html_content)
-print("Folk’s Gains added to SevenVoices/webdev/decrees.html with .gain class, Your Grace!")
+print("Folk’s Gains added to SevenVoices/webdev/decrees.html with reset button, Your Grace!")

@@ -48,3 +48,9 @@ h2 {
 .gain:hover {
     background-color: #e8f8e8; /* Subtle green hover */
 }
+
+.filtered { 
+    background-color: #d4edda; 
+}
+
+
