@@ -25,13 +25,15 @@ data = [
     ["Aerospace Engineering", "Design dragon harnesses, air scouts—master skies, rival Daenerys’s legacy.", "Dragon unpredictability (e.g., Drogon’s rampages); no aerial defense against aerial threats like Viserion.", 90, "Controlled dragons, skyward vigilance"]
 ]
 
-# Create Excel file
+# Create DataFrame and Excel file
 df = pd.DataFrame(data, columns=["Subject Name", "How it Helps in Ruling My Kingdoms", "Problems of Westeros It Can Solve", "Day to Apply", "Folk’s Gain"])
 df.to_excel("docs/sam_tutelage.xlsx", index=False)
 print("Royal spreadsheet forged at SevenVoices/docs/sam_tutelage.xlsx, Your Grace!")
 
-# Update decrees.html with Folk’s Gain
+# Define gains before HTML construction
 gains = df[["Subject Name", "Day to Apply", "Folk’s Gain"]].sort_values("Day to Apply")
+
+# Update decrees.html with Folk’s Gain
 html_content = """
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +54,7 @@ html_content = """
     <ul>
 """
 for _, row in gains.iterrows():
-    html_content += f"        <li>Day {row['Day to Apply']}: {row['Folk’s Gain']} (via {row['Subject Name']})</li>\n"
+    html_content += f"        <li class='gain'>Day {row['Day to Apply']}: {row['Folk’s Gain']} (via {row['Subject Name']})</li>\n"
 html_content += """    </ul>
     <script src="decrees.js"></script>
 </body>
@@ -61,4 +63,4 @@ html_content += """    </ul>
 
 with open("webdev/decrees.html", "w") as f:
     f.write(html_content)
-print("Folk’s Gains added to SevenVoices/webdev/decrees.html, Your Grace!")
+print("Folk’s Gains added to SevenVoices/webdev/decrees.html with .gain class, Your Grace!")
