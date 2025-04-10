@@ -1,2 +1,3 @@
-# seven-voices
-Solving day-to-day problems of Westeros folks!
+# Seven Voices
+Solving day-to-day problems of Westeros folks! These people have suffered a lot under the reign of previous monarchs, Now that we are enjoying democracy, proper legislation, execution and judgement must take place. To ensure this, I, King Bran Stark with the wise council of my Hand, Tyrion Lannister, Ser Davos and Maester Samwell Tarly am working on this open-source project titled "Seven Voices", so that we can hear to all seven kingdoms and make neccessary steps for the rule of the folks, by the folks and for the folks!
+# WINTER IS COMING! Brace Yourself!
