@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petition to the Throne of the Seven Kingdoms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .reset-btn {
+            background-color: #d9534f;
+        }
+        .reset-btn:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Petition to King Bran Stark</h2>
+        <form action="/submit-petition" method="POST">
+            <!-- Petitioner Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <!-- Region -->
+            <label for="region">Region of Origin:</label>
+            <select id="region" name="region" required>
+                <option value="" disabled selected>Select your region</option>
+                <option value="north">The North</option>
+                <option value="vale">The Vale</option>
+                <option value="riverlands">The Riverlands</option>
+                <option value="westerlands">The Westerlands</option>
+                <option value="stormlands">The Stormlands</option>
+                <option value="reach">The Reach</option>
+                <option value="dorne">Dorne</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Contact -->
+            <label for="email">Raven Contact (Email):</label>
+            <input type="email" id="email" name="email" placeholder="Enter your raven address" required>
+
+            <!-- Petition Type -->
+            <label for="petition-type">Type of Petition:</label>
+            <select id="petition-type" name="petition-type" required>
+                <option value="" disabled selected>Select petition type</option>
+                <option value="justice">Justice</option>
+                <option value="land-dispute">Land Dispute</option>
+                <option value="tax-relief">Tax Relief</option>
+                <option value="pardon">Pardon</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Petition Details -->
+            <label for="details">Petition Details:</label>
+            <textarea id="details" name="details" placeholder="Describe your petition in detail" required></textarea>
+
+            <!-- Buttons -->
+            <button type="submit">Submit Petition</button>
+            <button type="reset" class="reset-btn">Clear Form</button>
+        </form>
+    </div>
+</body>
+</html>
